@@ -33,45 +33,49 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val painter = painterResource(id = R.drawable.car)
-            val description= "A car"
-            val title = "A car"
-            val painter1 = painterResource(id = R.drawable.cat)
-            val description1= "A cat"
-            val title1 = "A cat"
-            val painter2 = painterResource(id = R.drawable.food)
-            val description2= "Food"
-            val title2 = "Food"
-            val painter3 = painterResource(id = R.drawable.phone)
-            val description3= "A phone"
-            val title3 = "A phone"
-            val painter4 = painterResource(id = R.drawable.snow)
-            val description4= "Snow"
-            val title4 = "Snow"
+            var painters = ArrayList<Painter>()
+            var descriptions = ArrayList<String>()
+            var titles = ArrayList<String>()
+            painters.add(0,painterResource(id = R.drawable.car))
+            painters.add(1,painterResource(id = R.drawable.cat))
+            painters.add(2,painterResource(id = R.drawable.food))
+            painters.add(3,painterResource(id = R.drawable.phone))
+            painters.add(4,painterResource(id = R.drawable.snow))
+            painters.add(5,painterResource(id = R.drawable.lavender))
+            painters.add(6,painterResource(id = R.drawable.plant))
+            titles.add(0,"A car")
+            titles.add(1,"A cat")
+            titles.add(2,"Food")
+            titles.add(3,"A Phone")
+            titles.add(4,"Snow")
+            titles.add(5,"Lavender")
+            titles.add(6,"A plant")
+            descriptions.add(0,"A car")
+            descriptions.add(1,"A cat")
+            descriptions.add(2,"Food")
+            descriptions.add(3,"A Phone")
+            descriptions.add(4,"Snow")
+            descriptions.add(5,"Lavender")
+            descriptions.add(6,"A plant")
+
             val scrollState = rememberScrollState()
-            val painter5 = painterResource(id = R.drawable.lavender)
-            val description5= "lavender"
-            val title5 = "lavender"
-            val painter6 = painterResource(id = R.drawable.plant)
-            val description6= "A plant"
-            val title6 = "A plant"
 
             Column (Modifier.verticalScroll(scrollState)){
                 Row {
                     Box(modifier = Modifier
                         .fillMaxWidth(0.5f)
                         .padding(16.dp)){
-                        ImageCard(painter = painter3,
-                            contentDescription = description3,
-                            title = title3
+                        ImageCard(painter = painters.get(0),
+                            contentDescription = descriptions.get(0),
+                            title = titles.get(0)
                         )
                     }
                     Box(modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp)){
-                        ImageCard(painter = painter4,
-                            contentDescription = description4,
-                            title = title4
+                        ImageCard(painter = painters.get(1),
+                            contentDescription = descriptions.get(1),
+                            title = titles.get(1)
                         )
                     }
 
@@ -80,17 +84,17 @@ class MainActivity : ComponentActivity() {
                     Box(modifier = Modifier
                         .fillMaxWidth(0.5f)
                         .padding(16.dp)){
-                        ImageCard(painter = painter1,
-                            contentDescription = description1,
-                            title = title1
+                        ImageCard(painter = painters.get(2),
+                            contentDescription = descriptions.get(2),
+                            title = titles.get(2)
                         )
                     }
                     Box(modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp)){
-                        ImageCard(painter = painter5,
-                            contentDescription = description5,
-                            title = title5
+                        ImageCard(painter = painters.get(3),
+                            contentDescription = descriptions.get(3),
+                            title = titles.get(3)
                         )
                     }
                 }
@@ -99,17 +103,17 @@ class MainActivity : ComponentActivity() {
                     Box(modifier = Modifier
                         .fillMaxWidth(0.5f)
                         .padding(16.dp)){
-                        ImageCard(painter = painter,
-                            contentDescription = description,
-                            title = title
+                        ImageCard(painter = painters.get(4),
+                            contentDescription = descriptions.get(4),
+                            title = titles.get(4)
                         )
                     }
                     Box(modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp)){
-                        ImageCard(painter = painter6,
-                            contentDescription = description6,
-                            title = title6
+                        ImageCard(painter = painters.get(5),
+                            contentDescription = descriptions.get(5),
+                            title = titles.get(5)
                         )
                     }
                 }
@@ -117,9 +121,9 @@ class MainActivity : ComponentActivity() {
                 Box(modifier = Modifier
                     .fillMaxWidth(0.5f)
                     .padding(16.dp)){
-                    ImageCard(painter = painter2,
-                        contentDescription = description2,
-                        title = title2
+                    ImageCard(painter = painters.get(6),
+                        contentDescription = descriptions.get(6),
+                        title = titles.get(6)
                     )
                 }
             }
