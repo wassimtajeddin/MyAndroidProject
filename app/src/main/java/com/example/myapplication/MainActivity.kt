@@ -12,9 +12,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -48,7 +48,28 @@ class MainActivity : ComponentActivity() {
             val painter4 = painterResource(id = R.drawable.snow)
             val description4= "Snow"
             val title4 = "Snow"
-            Column {
+            val scrollState = rememberScrollState()
+
+            Column (Modifier.verticalScroll(scrollState)){
+                Row {
+                    Box(modifier = Modifier
+                        .fillMaxWidth(0.5f)
+                        .padding(16.dp)){
+                        ImageCard(painter = painter3,
+                            contentDescription = description3,
+                            title = title3
+                        )
+                    }
+                    Box(modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp)){
+                        ImageCard(painter = painter4,
+                            contentDescription = description4,
+                            title = title4
+                        )
+                    }
+
+                }
                 Box(modifier = Modifier
                     .fillMaxWidth(0.5f)
                     .padding(16.dp)){
@@ -73,14 +94,12 @@ class MainActivity : ComponentActivity() {
                         title = title2
                     )
                 }
-
             }
 
-
-
+                }
         }
     }
-}
+
 
 @Composable
 fun ImageCard(
