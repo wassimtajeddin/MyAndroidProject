@@ -6,13 +6,16 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardElevation
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -33,14 +36,47 @@ class MainActivity : ComponentActivity() {
             val painter = painterResource(id = R.drawable.car)
             val description= "A car"
             val title = "A car"
-            Box(modifier = Modifier
-                .fillMaxWidth(0.5f)
-                .padding(16.dp)){
-                ImageCard(painter = painter,
-                    contentDescription = description,
-                    title = title
-                )
+            val painter1 = painterResource(id = R.drawable.cat)
+            val description1= "A cat"
+            val title1 = "A cat"
+            val painter2 = painterResource(id = R.drawable.food)
+            val description2= "Food"
+            val title2 = "Food"
+            val painter3 = painterResource(id = R.drawable.phone)
+            val description3= "A phone"
+            val title3 = "A phone"
+            val painter4 = painterResource(id = R.drawable.snow)
+            val description4= "Snow"
+            val title4 = "Snow"
+            Column {
+                Box(modifier = Modifier
+                    .fillMaxWidth(0.5f)
+                    .padding(16.dp)){
+                    ImageCard(painter = painter1,
+                        contentDescription = description1,
+                        title = title1
+                    )
+                }
+                Box(modifier = Modifier
+                    .fillMaxWidth(0.5f)
+                    .padding(16.dp)){
+                    ImageCard(painter = painter,
+                        contentDescription = description,
+                        title = title
+                    )
+                }
+                Box(modifier = Modifier
+                    .fillMaxWidth(0.5f)
+                    .padding(16.dp)){
+                    ImageCard(painter = painter2,
+                        contentDescription = description2,
+                        title = title2
+                    )
+                }
+
             }
+
+
 
         }
     }
@@ -67,10 +103,10 @@ fun ImageCard(
                 .fillMaxSize()
                 .background(
                     Brush.verticalGradient(
-                    colors = listOf(
-                        Color.Transparent,
-                        Color.Black
-                    ),
+                        colors = listOf(
+                            Color.Transparent,
+                            Color.Black
+                        ),
                         startY = 300f
                     )
                 )
