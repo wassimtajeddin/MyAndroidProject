@@ -49,6 +49,12 @@ class MainActivity : ComponentActivity() {
             val description4= "Snow"
             val title4 = "Snow"
             val scrollState = rememberScrollState()
+            val painter5 = painterResource(id = R.drawable.lavender)
+            val description5= "lavender"
+            val title5 = "lavender"
+            val painter6 = painterResource(id = R.drawable.plant)
+            val description6= "A plant"
+            val title6 = "A plant"
 
             Column (Modifier.verticalScroll(scrollState)){
                 Row {
@@ -70,22 +76,44 @@ class MainActivity : ComponentActivity() {
                     }
 
                 }
-                Box(modifier = Modifier
-                    .fillMaxWidth(0.5f)
-                    .padding(16.dp)){
-                    ImageCard(painter = painter1,
-                        contentDescription = description1,
-                        title = title1
-                    )
+                Row {
+                    Box(modifier = Modifier
+                        .fillMaxWidth(0.5f)
+                        .padding(16.dp)){
+                        ImageCard(painter = painter1,
+                            contentDescription = description1,
+                            title = title1
+                        )
+                    }
+                    Box(modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp)){
+                        ImageCard(painter = painter5,
+                            contentDescription = description5,
+                            title = title5
+                        )
+                    }
                 }
-                Box(modifier = Modifier
-                    .fillMaxWidth(0.5f)
-                    .padding(16.dp)){
-                    ImageCard(painter = painter,
-                        contentDescription = description,
-                        title = title
-                    )
+                Row {
+
+                    Box(modifier = Modifier
+                        .fillMaxWidth(0.5f)
+                        .padding(16.dp)){
+                        ImageCard(painter = painter,
+                            contentDescription = description,
+                            title = title
+                        )
+                    }
+                    Box(modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp)){
+                        ImageCard(painter = painter6,
+                            contentDescription = description6,
+                            title = title6
+                        )
+                    }
                 }
+
                 Box(modifier = Modifier
                     .fillMaxWidth(0.5f)
                     .padding(16.dp)){
@@ -135,7 +163,7 @@ fun ImageCard(
                 .padding(12.dp),
                 contentAlignment = Alignment.BottomStart){
                 Text(
-                    title,style = TextStyle(color = Color.Black, fontSize = 16.sp))
+                    title,style = TextStyle(color = Color.White, fontSize = 16.sp))
             }
         }
     }
