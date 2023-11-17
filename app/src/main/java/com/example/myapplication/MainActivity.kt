@@ -65,17 +65,17 @@ class MainActivity : ComponentActivity() {
                     Box(modifier = Modifier
                         .fillMaxWidth(0.5f)
                         .padding(16.dp)){
-                        ImageCard(painter = painters.get(0),
-                            contentDescription = descriptions.get(0),
-                            title = titles.get(0)
+                        ImageCard(painter = painters[0],
+                            contentDescription = descriptions[0],
+                            title = titles[0]
                         )
                     }
                     Box(modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp)){
-                        ImageCard(painter = painters.get(1),
-                            contentDescription = descriptions.get(1),
-                            title = titles.get(1)
+                        ImageCard(painter = painters[1],
+                            contentDescription = descriptions[1],
+                            title = titles[1]
                         )
                     }
 
@@ -84,17 +84,17 @@ class MainActivity : ComponentActivity() {
                     Box(modifier = Modifier
                         .fillMaxWidth(0.5f)
                         .padding(16.dp)){
-                        ImageCard(painter = painters.get(2),
-                            contentDescription = descriptions.get(2),
-                            title = titles.get(2)
+                        ImageCard(painter = painters[2],
+                            contentDescription = descriptions[2],
+                            title = titles[2]
                         )
                     }
                     Box(modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp)){
-                        ImageCard(painter = painters.get(3),
-                            contentDescription = descriptions.get(3),
-                            title = titles.get(3)
+                        ImageCard(painter = painters[3],
+                            contentDescription = descriptions[3],
+                            title = titles[3]
                         )
                     }
                 }
@@ -103,17 +103,17 @@ class MainActivity : ComponentActivity() {
                     Box(modifier = Modifier
                         .fillMaxWidth(0.5f)
                         .padding(16.dp)){
-                        ImageCard(painter = painters.get(4),
-                            contentDescription = descriptions.get(4),
-                            title = titles.get(4)
+                        ImageCard(painter = painters[4],
+                            contentDescription = descriptions[4],
+                            title = titles[4]
                         )
                     }
                     Box(modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp)){
-                        ImageCard(painter = painters.get(5),
-                            contentDescription = descriptions.get(5),
-                            title = titles.get(5)
+                        ImageCard(painter = painters[5],
+                            contentDescription = descriptions[5],
+                            title = titles[5]
                         )
                     }
                 }
@@ -121,9 +121,9 @@ class MainActivity : ComponentActivity() {
                 Box(modifier = Modifier
                     .fillMaxWidth(0.5f)
                     .padding(16.dp)){
-                    ImageCard(painter = painters.get(6),
-                        contentDescription = descriptions.get(6),
-                        title = titles.get(6)
+                    ImageCard(painter = painters[6],
+                        contentDescription = descriptions[6],
+                        title = titles[6]
                     )
                 }
             }
