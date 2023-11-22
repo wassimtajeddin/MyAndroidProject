@@ -33,30 +33,17 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            var painters = ArrayList<Painter>()
-            var descriptions = ArrayList<String>()
-            var titles = ArrayList<String>()
-            painters.add(0,painterResource(id = R.drawable.car))
-            painters.add(1,painterResource(id = R.drawable.cat))
-            painters.add(2,painterResource(id = R.drawable.food))
-            painters.add(3,painterResource(id = R.drawable.phone))
-            painters.add(4,painterResource(id = R.drawable.snow))
-            painters.add(5,painterResource(id = R.drawable.lavender))
-            painters.add(6,painterResource(id = R.drawable.plant))
-            titles.add(0,"A car")
-            titles.add(1,"A cat")
-            titles.add(2,"Food")
-            titles.add(3,"A Phone")
-            titles.add(4,"Snow")
-            titles.add(5,"Lavender")
-            titles.add(6,"A plant")
-            descriptions.add(0,"A car")
-            descriptions.add(1,"A cat")
-            descriptions.add(2,"Food")
-            descriptions.add(3,"A Phone")
-            descriptions.add(4,"Snow")
-            descriptions.add(5,"Lavender")
-            descriptions.add(6,"A plant")
+            var painters = ArrayList<Painter>(listOf(
+                painterResource(id = R.drawable.car),
+                painterResource(id = R.drawable.cat),
+                painterResource(id = R.drawable.food),
+                painterResource(id = R.drawable.phone),
+                painterResource(id = R.drawable.snow),
+                painterResource(id = R.drawable.lavender),
+                painterResource(id = R.drawable.plant)
+                ))
+            var descriptions = ArrayList<String>(listOf("A car","A cat","Food","A Phone","Snow","Lavender","A plant"))
+            var titles = ArrayList<String>(listOf("A car","A cat","Food","A Phone","Snow","Lavender","A plant"))
 
             val scrollState = rememberScrollState()
 
