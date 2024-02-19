@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            var painters = ArrayList<Painter>(listOf(
+            val painters = ArrayList<Painter>(listOf(
                 painterResource(id = R.drawable.car),
                 painterResource(id = R.drawable.cat),
                 painterResource(id = R.drawable.food),
@@ -42,8 +42,8 @@ class MainActivity : ComponentActivity() {
                 painterResource(id = R.drawable.lavender),
                 painterResource(id = R.drawable.plant)
                 ))
-            var descriptions = ArrayList<String>(listOf("A car","A cat","Food","A Phone","Snow","Lavender","A plant"))
-            var titles = ArrayList<String>(listOf("A car","A cat","Food","A Phone","Snow","Lavender","A plant"))
+            val descriptions = ArrayList<String>(listOf("A car","A cat","Food","A Phone","Snow","Lavender","A plant"))
+            val titles = ArrayList<String>(listOf("A car","A cat","Food","A Phone","Snow","Lavender","A plant"))
 
             val scrollState = rememberScrollState()
 
